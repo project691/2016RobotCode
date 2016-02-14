@@ -14,8 +14,6 @@ import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc691.RobotCode.Robot;
 
 // COMMAND FUNCTION: SCORE INTO THE HIGH GOAL
-// This command starts up the shooter then runs the keeper for a set
-// amount of time with the intent to score into the high goal.
 
 public class HighShoot extends Command {
 
@@ -38,9 +36,9 @@ public class HighShoot extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     	// In seconds, the amount of time you want the command to run.
-    	setTimeout(4);
+    	// setTimeout(4);
     	
-    	// Calls the runShooter() function from the shooter subsystem.
+    	// Calls the runShooter() function from the shooter class.
     	// Runs the shooter until the command ends.
     	Robot.shooter.runShooter();
     	
@@ -54,7 +52,7 @@ public class HighShoot extends Command {
 		}
 		
     	// After the delay, calls the runKeeper() function from the 
-    	// keeper subsystem.
+    	// keeper class.
     	Robot.keeper.runKeeper();
     }
 
@@ -66,14 +64,16 @@ public class HighShoot extends Command {
     protected boolean isFinished() {
     	// Returns true when the setTimeout() call in the previous 
     	// initialize() function has timed out.
-        return isTimedOut();
+        // return isTimedOut();
+    	
+    	return false;
     }
 
     // Called once after isFinished returns true
     protected void end() {
     	// Calls the stopShooter() and stopKeeper() functions from
-    	// the shooter and keeper subsystem classes. Stops the
-    	// shooter and keeper motors.
+    	// the shooter and keeper classes. Stops the shooter and
+    	// keeper.
     	Robot.shooter.stopShooter();
     	Robot.keeper.stopKeeper();
     }
@@ -81,5 +81,6 @@ public class HighShoot extends Command {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	end();
     }
 }

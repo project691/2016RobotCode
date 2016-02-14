@@ -63,6 +63,7 @@ public class Robot extends IterativeRobot {
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
+    
     public void robotInit() {
     RobotMap.init();
     
@@ -121,6 +122,7 @@ public class Robot extends IterativeRobot {
     /**
      * This function is called periodically during autonomous
      */
+    
     public void autonomousPeriodic() {
         Scheduler.getInstance().run();
         
@@ -148,17 +150,19 @@ public class Robot extends IterativeRobot {
     /**
      * This function is called periodically during operator control
      */
+    
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
         
         // This puts the true or false value returned by the hasBall()
-        // function called from the keeper subsystem class.
+        // function called from the keeper subsystem class to the SmartDashboard.
         SmartDashboard.putBoolean("Has Ball", Robot.keeper.hasBall());
     }
 
     /**
      * This function is called periodically during test mode
      */
+    
     public void testPeriodic() {
         LiveWindow.run();
     }

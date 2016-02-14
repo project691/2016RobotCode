@@ -48,12 +48,12 @@ public class Keeper extends Subsystem {
     
     // This function runs the keeper motor at a set speed.
     public void runKeeper() {
-    	keeperMotor.set(1);
+    	keeperMotor.set(-1);
     }
     
     // This function runs the keeper motor reversely at a set speed.
     public void reverseKeeper() {
-    	keeperMotor.set(-1);
+    	keeperMotor.set(1);
     }
     
     // This function stops the keeper motor.
@@ -81,4 +81,3 @@ public class Keeper extends Subsystem {
     	return Robot.keeperSwitch;
     }
 }
-

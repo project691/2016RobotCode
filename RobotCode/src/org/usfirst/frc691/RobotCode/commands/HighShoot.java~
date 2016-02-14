@@ -38,12 +38,12 @@ public class HighShoot extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     	// In seconds, the amount of time you want the command to run.
-    	setTimeout(3);
+    	//setTimeout(4);
     	
     	// Calls the runShooter() function from the shooter subsystem.
     	// Runs the shooter until the command ends.
     	Robot.shooter.runShooter();
-    /*	
+    	
     	// Calls Thread.sleep(). In milliseconds (1000ms = approx. 1 s)
     	// the amount of time the keeper should be delayed.
     	try {
@@ -52,7 +52,6 @@ public class HighShoot extends Command {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	*/
 		
     	// After the delay, calls the runKeeper() function from the 
     	// keeper subsystem.
@@ -67,7 +66,8 @@ public class HighShoot extends Command {
     protected boolean isFinished() {
     	// Returns true when the setTimeout() call in the previous 
     	// initialize() function has timed out.
-        return isTimedOut();
+        //return isTimedOut();
+    	return false;
     }
 
     // Called once after isFinished returns true
@@ -82,5 +82,6 @@ public class HighShoot extends Command {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	end();
     }
 }
