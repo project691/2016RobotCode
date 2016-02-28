@@ -14,8 +14,6 @@ import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc691.RobotCode.Robot;
 
 // COMMAND FUNCTION: SCORE INTO THE LOW GOAL
-// This command runs the intake and keeper backwards for a set amount
-// of time with the intent to score into the low goal.
 
 public class LowShoot extends Command {
 
@@ -38,10 +36,10 @@ public class LowShoot extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     	// In seconds, the amount of time you want the command to run.
-    	//setTimeout(3);
+    	// setTimeout(3);
     	
-    	// Calls the reverseIntake and reverseKeeper functions from
-    	// the intake and keeper subsystem classes. Runs the intake
+    	// Calls the reverseIntake() and reverseKeeper() functions 
+    	// from the intake and keeper classes. Runs the intake
     	// and keeper motors until the command ends.
     	Robot.intake.reverseIntake();
     	Robot.keeper.reverseKeeper();
@@ -55,15 +53,15 @@ public class LowShoot extends Command {
     protected boolean isFinished() {
     	// Returns true when the setTimeout() call in the previous 
     	// initialize() function has timed out.
-        //return isTimedOut();
+        // return isTimedOut();
     	return false;
     }
 
     // Called once after isFinished returns true
     protected void end() {
     	// Calls the stopKeeper() and stopIntake() functions from
-    	// the keeper and intake subsystem classes. Stops the
-    	// keeper and intake motors.
+    	// the keeper and intake classes. Stops the keeper and
+    	// intake.
     	Robot.keeper.stopKeeper();
     	Robot.intake.stopIntake();
     }

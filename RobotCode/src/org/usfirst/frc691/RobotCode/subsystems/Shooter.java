@@ -46,19 +46,19 @@ public class Shooter extends Subsystem {
     
     // This function runs the shooter motor at a set speed.
     public void runShooter() {
-    	shooterMotor.set(1);
+    	shooterMotor.set(-1);
     }
     
     // This function runs the shooter motor at a set speed.
     // Was created for the UpLob command.
     public void upShooter() {
-    	shooterMotor.set(0.8);
+    	shooterMotor.set(-0.8);
     }
     
     // This function runs the shooter motor at a set speed.
     // Was created for the DownLob command.
     public void downShooter () {
-    	shooterMotor.set(0.7);
+    	shooterMotor.set(-0.7);
     }
     
     // This function stops the shooter motor.

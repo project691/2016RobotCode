@@ -141,10 +141,10 @@ public class Robot extends IterativeRobot {
         // This variable detects whether the digital input for the drive
         // mode is true or false. True indicates tank drive, false indicates
         // arcade drive.
-        useTankDrive = RobotMap.driveTrainDriveDetector.get();
+        useTankDrive = !RobotMap.driveTrainDriveDetector.get();
         
         // This puts the true or false value to the SmartDashboard.
-        SmartDashboard.putBoolean("Tank Drive Enabled", RobotMap.driveTrainDriveDetector.get());
+        SmartDashboard.putBoolean("Tank Drive Enabled", !RobotMap.driveTrainDriveDetector.get());
     }
 
     /**

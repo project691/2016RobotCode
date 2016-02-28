@@ -46,12 +46,12 @@ public class Arm extends Subsystem {
    
     // This function runs the arm motor at a set speed.
     public void runArm() {
-    	Robot.arm.armMotor.set(-0.35);
+    	Robot.arm.armMotor.set(-0.7);
     }
    
     // This function runs the arm motor reversely at a set speed.
     public void reverseArm() {
-    	Robot.arm.armMotor.set(0.35);
+    	Robot.arm.armMotor.set(0.7);
     }
    
     // This function stops the arm motor.

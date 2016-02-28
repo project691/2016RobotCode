@@ -141,10 +141,10 @@ public class Robot extends IterativeRobot {
         // This variable detects whether the digital input for the drive
         // mode is true or false. True indicates tank drive, false indicates
         // arcade drive.
-        useTankDrive = RobotMap.driveTrainDriveDetector.get();
+        useTankDrive = RobotMap.driveTrainDriveSwitch.get();
         
         // This puts the true or false value to the SmartDashboard.
-        SmartDashboard.putBoolean("Tank Drive Enabled", RobotMap.driveTrainDriveDetector.get());
+        SmartDashboard.putBoolean("Tank Drive Enabled", RobotMap.driveTrainDriveSwitch.get());
     }
 
     /**
@@ -155,8 +155,12 @@ public class Robot extends IterativeRobot {
         Scheduler.getInstance().run();
         
         // This puts the true or false value returned by the hasBall()
-        // function called from the keeper subsystem class to the SmartDashboard.
+        // function called from the Keeper class to the SmartDashboard.
         SmartDashboard.putBoolean("Has Ball", Robot.keeper.hasBall());
+        
+        // This puts the robot's distance returned by the getDistance()
+        // function called from the DriveTrain class to the SmartDashboard.
+        SmartDashboard.putNumber("Distance", Robot.driveTrain.getDistance());
     }
 
     /**
