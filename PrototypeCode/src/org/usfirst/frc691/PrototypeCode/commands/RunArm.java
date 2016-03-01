@@ -37,7 +37,7 @@ public class RunArm extends Command {
     protected void initialize() {
     	// Calls the runArm() function from the arm class.
     	// Runs the arm until the command ends.
-    	Robot.arm.rampUpArm(0);
+    	Robot.arm.runArm();
     }
 
     // Called repeatedly when this Command is scheduled to run

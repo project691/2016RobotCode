@@ -45,7 +45,7 @@ Children:
             default: Talon
             name: Type
             validators: null
-            value: Spark
+            value: Victor
           Output Channel (PWM): !!robotbuilder.data.properties.ChoicesProperty
             choices: *id002
             default: '0'
@@ -190,7 +190,7 @@ Children:
           default: Talon
           name: Type
           validators: null
-          value: Victor
+          value: Spark
         Output Channel (PWM): !!robotbuilder.data.properties.ChoicesProperty
           choices: *id002
           default: '0'
@@ -244,7 +244,7 @@ Children:
           default: Talon
           name: Type
           validators: null
-          value: Victor
+          value: Spark
         Output Channel (PWM): !!robotbuilder.data.properties.ChoicesProperty
           choices: *id002
           default: '0'

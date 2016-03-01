@@ -62,7 +62,7 @@ public class Climb extends Subsystem {
     // This function increases the climb motor slowly to full speed.
     public void rampClimb(double speed) {
     	if (speed < 1) {
-    		speed += 0.01;
+    		speed += 0.001;
     		climbMotor.set(speed);
     		rampClimb(speed);
     	}

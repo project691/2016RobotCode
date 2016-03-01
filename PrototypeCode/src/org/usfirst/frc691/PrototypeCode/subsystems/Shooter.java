@@ -44,7 +44,7 @@ public class Shooter extends Subsystem {
     
     // This function runs the shooter motor at a set speed.
     public void runShooter() {
-    	shooterMotor.set(-1);
+    	shooterMotor.set(1);
     }
     
     // This function stops the shooter motor.

@@ -37,7 +37,7 @@ public class ReverseArm extends Command {
     protected void initialize() {
     	// Calls the reverseArm() function from the arm class.
     	// Runs the arm until the command ends.
-    	Robot.arm.rampDownArm(0);
+    	Robot.arm.reverseArm();
     }
 
     // Called repeatedly when this Command is scheduled to run

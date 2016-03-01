@@ -8,7 +8,6 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-
 package org.usfirst.frc691.PrototypeCode;
 
 import org.usfirst.frc691.PrototypeCode.commands.*;
@@ -17,11 +16,11 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.*;
 import org.usfirst.frc691.PrototypeCode.subsystems.*;
 
-
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
+
 public class OI {
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
@@ -61,7 +60,6 @@ public class OI {
     public JoystickButton intakeButton;
     public JoystickButton highButton;
     public JoystickButton lowButton;
-    public JoystickButton lobButton;
     public JoystickButton fKeeperButton;
     public JoystickButton bKeeperButton;
     public Joystick joystick2;
@@ -77,8 +75,6 @@ public class OI {
         bKeeperButton.whileHeld(new ReverseKeeper());
         fKeeperButton = new JoystickButton(joystick2, 5);
         fKeeperButton.whileHeld(new RunKeeper());
-        lobButton = new JoystickButton(joystick2, 7);
-        lobButton.whileHeld(new LobShoot());
         lowButton = new JoystickButton(joystick2, 2);
         lowButton.whileHeld(new LowShoot());
         highButton = new JoystickButton(joystick2, 3);

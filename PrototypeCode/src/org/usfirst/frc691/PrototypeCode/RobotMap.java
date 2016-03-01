@@ -55,8 +55,8 @@ public class RobotMap {
         driveTrainLeftRear = new Spark(1);
         LiveWindow.addActuator("DriveTrain", "LeftRear", (Spark) driveTrainLeftRear);
         
-        driveTrainRightFront = new Spark(2);
-        LiveWindow.addActuator("DriveTrain", "RightFront", (Spark) driveTrainRightFront);
+        driveTrainRightFront = new Victor(2);
+        LiveWindow.addActuator("DriveTrain", "RightFront", (Victor) driveTrainRightFront);
         
         driveTrainRightRear = new Victor(3);
         LiveWindow.addActuator("DriveTrain", "RightRear", (Victor) driveTrainRightRear);
@@ -81,8 +81,8 @@ public class RobotMap {
         intakeIntakeMotor = new Victor(4);
         LiveWindow.addActuator("Intake", "IntakeMotor", (Victor) intakeIntakeMotor);
         
-        keeperKeeperMotor = new Victor(5);
-        LiveWindow.addActuator("Keeper", "KeeperMotor", (Victor) keeperKeeperMotor);
+        keeperKeeperMotor = new Spark(5);
+        LiveWindow.addActuator("Keeper", "KeeperMotor", (Spark) keeperKeeperMotor);
         
         keeperKeeperLimit1 = new DigitalInput(3);
         LiveWindow.addSensor("Keeper", "KeeperLimit1", keeperKeeperLimit1);
@@ -90,8 +90,8 @@ public class RobotMap {
         keeperKeeperLimit2 = new DigitalInput(4);
         LiveWindow.addSensor("Keeper", "KeeperLimit2", keeperKeeperLimit2);
         
-        shooterShooterMotor = new Victor(6);
-        LiveWindow.addActuator("Shooter", "ShooterMotor", (Victor) shooterShooterMotor);
+        shooterShooterMotor = new Spark(6);
+        LiveWindow.addActuator("Shooter", "ShooterMotor", (Spark) shooterShooterMotor);
         
         armArmMotor = new Victor(7);
         LiveWindow.addActuator("Arm", "ArmMotor", (Victor) armArmMotor);
