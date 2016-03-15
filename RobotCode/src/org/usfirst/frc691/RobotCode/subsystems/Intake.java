@@ -44,18 +44,12 @@ public class Intake extends Subsystem {
     
     // This function runs the intake motor at a set speed.
     public void runIntake() {
-    	intakeMotor.set(0.8);
+    	intakeMotor.set(0.7);
     }
     
     // This function runs the intake motor reversely at a set speed.
     public void reverseIntake() {
-    	intakeMotor.set(-0.8);
-    }
-    
-    // This function runs the intake motor reversely and slowly at
-    // a set speed. Was created for the PushIntake command.
-    public void slowIntake() {
-    	intakeMotor.set(-0.5);
+    	intakeMotor.set(-0.7);
     }
     
     // This function stops the intake motor.

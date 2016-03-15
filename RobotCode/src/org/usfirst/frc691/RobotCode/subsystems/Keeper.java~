@@ -50,12 +50,12 @@ public class Keeper extends Subsystem {
     
     // This function runs the keeper motor at a set speed.
     public void runKeeper() {
-    	keeperMotor.set(-1);
+    	keeperMotor.set(0.5);
     }
     
     // This function runs the keeper motor reversely at a set speed.
     public void reverseKeeper() {
-    	keeperMotor.set(1);
+    	keeperMotor.set(-0.5);
     }
     
     // This function stops the keeper motor.
@@ -63,6 +63,7 @@ public class Keeper extends Subsystem {
     	keeperMotor.set(0);
     }
     
+    // This function is deprecated and kept only for reference purposes.
     // This function returns whether the keeper has the ball or not.
     
     /*
@@ -87,11 +88,10 @@ public class Keeper extends Subsystem {
     	
     	*/
     
+    // This function returns whether the keeper has the ball or not.
+    
     public boolean hasBall() {
-    	if (keeperLimit1.get() == true || keeperLimit2.get() == true) {
-    		return true;
-    	} else {
-    	return false;
-    	}
+    	Robot.keeperSwitch = keeperLimit1.get();
+    	return Robot.keeperSwitch;
     }
 }

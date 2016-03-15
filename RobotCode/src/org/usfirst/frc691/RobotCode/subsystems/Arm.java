@@ -58,4 +58,21 @@ public class Arm extends Subsystem {
     public void stopArm() {
     	Robot.arm.armMotor.set(0);
     }
+    
+    // This function was created for the low bar autonomous command.
+    // It runs the arm motor for a set amount of time.
+    public void downArm() {
+    	Robot.arm.armMotor.set(-1);
+    	
+    	// Calls Thread.sleep(). In milliseconds (1000ms = approx. 1 s)
+    	// the amount of time the arm should keep running.
+    	try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	Robot.arm.armMotor.set(0);
+    }
 }

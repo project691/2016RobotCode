@@ -95,7 +95,7 @@ public class Robot extends IterativeRobot {
         // command from the SmartDashboard before the match.
         autoChooser = new SendableChooser();
         autoChooser.addDefault("Default Program", new AutonomousCommand());
-        autoChooser.addObject("Experimental Program", new AutonomousExperimental());
+        autoChooser.addObject("Experimental Program", new AutoLowBar());
         SmartDashboard.putData("Autonomous Mode Chooser", autoChooser);
     }
 

@@ -45,7 +45,7 @@ public class HighShoot extends Command {
     	// Calls Thread.sleep(). In milliseconds (1000ms = approx. 1 s)
     	// the amount of time the keeper should be delayed.
     	try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
